@@ -6,4 +6,4 @@ page = client.get_block("https://www.notion.so/1063a61b0a4548959373f995b008d13e?
 for child in page.children:
     print(child.title)
 
-print("Parent of {} is {}".format(page.id, page.parent.id))
+print(f"Parent of {page.id} is {page.parent.id}")

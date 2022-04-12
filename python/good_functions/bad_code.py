@@ -42,12 +42,12 @@ def load_data(url: str, output: str, path_train: str, path_test: str):
     t_train = []
     for file in tweets_train_files:
         train_doc_1 = [r.text for r in ET.parse(join(path_train, file)).getroot()[0]]
-        t_train.append(" ".join(t for t in train_doc_1))
+        t_train.append(" ".join(train_doc_1))
 
     t_test = []
     for file in tweets_test_files:
         test_doc_1 = [r.text for r in ET.parse(join(path_test, file)).getroot()[0]]
-        t_test.append(" ".join(t for t in test_doc_1))
+        t_test.append(" ".join(test_doc_1))
 
     return t_train, t_test
 

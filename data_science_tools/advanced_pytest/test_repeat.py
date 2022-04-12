@@ -15,14 +15,14 @@ def test_extend():
 def test_extend_random():
     l1 = []
     l2 = []
-    for _ in range(0,3):
+    for _ in range(3):
         n = random.randint(1,10)
         l1.append(n)
         n = random.randint(1,10)
         l2.append(n)
 
     res = extend(l1,l2)
-    
+
     assert res[-(len(l2)):] == l2
 
     

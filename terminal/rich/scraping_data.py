@@ -16,4 +16,4 @@ with console.status("[bold green]Scraping data...", spinner='aesthetic') as stat
         data = datas.pop(0)
         sleep(1)
         console.log(f"[green]Finish scraping data[/green] {data}")
-    console.log(f'[bold][red]Done!')
+    console.log('[bold][red]Done!')

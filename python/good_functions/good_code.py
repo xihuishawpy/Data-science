@@ -77,9 +77,7 @@ class DataGetter:
         list_of_text_in_one_file = [
             r.text for r in ET.parse(join(path_to_file, file_name)).getroot()[0]
         ]
-        text_in_one_file_as_string = " ".join(t for t in list_of_text_in_one_file)
-
-        return text_in_one_file_as_string
+        return " ".join(list_of_text_in_one_file)
 
 
 if __name__ == "__main__":

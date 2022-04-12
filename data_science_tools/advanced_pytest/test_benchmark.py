@@ -5,18 +5,13 @@ def concat(len_list):
     return l 
 
 def append(len_list):
-    l = []
-    for i in range(len_list):
-        l.append(i)
-    return l 
+    return list(range(len_list)) 
 
 def comprehension(len_list):
-    l = [i for i in range(len_list)]
-    return l 
+    return list(range(len_list)) 
     
 def list_range(len_list):
-    l = list(range(len_list))
-    return l 
+    return list(range(len_list)) 
 
 def test_concat(benchmark):
 

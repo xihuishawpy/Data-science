@@ -29,8 +29,7 @@ def get_books(query: str):
     """Get the first 3 books based on the query"""
     api = f"https://openlibrary.org/search.json?title={query}"
     response = requests.get(api)
-    content = response.json()['docs'][:3]
-    return content 
+    return response.json()['docs'][:3] 
 
 def get_books_of_text(text: str):
     """Get books given a test"""
@@ -49,8 +48,7 @@ def get_activity_content(inputs: dict):
     else:
         api = f"https://www.boredapi.com/api/activity?type={inputs['value']}"
     response = requests.get(api)
-    content = response.json()
-    return content
+    return response.json()
 
 # ---- layout util functions
 def display_activity_for_boredom():
@@ -61,7 +59,7 @@ def display_activity_for_boredom():
 
 
 def create_book_table(books: List[dict]):
-    if books == []:
+    if not books:
         put_markdown("No books with this topic is found")
         return
     book_table = [[book['title'], book.get('author_name', ['_'])[0]] for book in books]

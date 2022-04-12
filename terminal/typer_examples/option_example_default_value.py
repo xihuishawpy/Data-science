@@ -6,7 +6,7 @@ def greeting(name: str = typer.Argument(..., help='Username'),
     if is_user:
         print(f'Hello {name}!')
     else:
-        print(f"You haven't signed up yet. Please sign up to continue.")
+        print("You haven't signed up yet. Please sign up to continue.")
 
 
 if __name__ == '__main__':

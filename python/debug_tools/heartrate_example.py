@@ -6,9 +6,8 @@ heartrate.trace(browser=True)
 def factorial(x):
     if x == 1:
         return 1
-    else:
-        sleep(0.5)
-        return (x * factorial(x-1))
+    sleep(0.5)
+    return (x * factorial(x-1))
 
 
 if __name__ == "__main__":
